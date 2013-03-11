@@ -14,4 +14,7 @@ class python {
 	package { "build-essential":
 		ensure => installed,
 	}
+	package { "git":
+		ensure => installed,
+	}
 }
