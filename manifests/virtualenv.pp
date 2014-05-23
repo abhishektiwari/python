@@ -10,8 +10,8 @@ class python::virtualenv {
 	}
 	# Install virtualenvwrapper
 	package { "python-virtualenvwrapper":
-		ensure => installed,
-		require    => Package['python-virtualenv'],
+		ensure  => installed,
+		require => Package['python-virtualenv'],
 	}
 	
 }
