@@ -1,4 +1,4 @@
-# .bashrc
+# .bash_profile
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -7,3 +7,5 @@ fi
 
 cd /<%= shared_folder %>
 source <%= venv_root %>/bin/activate
+
+export WORKON_HOME=$HOME/.virtualenvs

@@ -6,7 +6,7 @@ class python::pip {
 	# resources
 	package { "python-pip":
 		ensure     => installed,
-		require    => Package['python-setuptools', 'python-dev', 'build-essential'],
+		require    => Class[python],
 	}
 	
 }

@@ -32,13 +32,13 @@ class python::myvirtualenv ($app_name= "myvirtualenv", $owner="vagrant", group="
 	else {
 		$uhome = "/home/${owner}"
 	}
-	file {"${uhome}/.bashrc":
+	file {"${uhome}/.bash_profile":
 		ensure  => present,
 		owner   => $owner,
 		group   => $group,
 		mode    => '0644',
 		# content or source or target
-		content => template('python/bashrc.erb'),
+		content => template('python/bash_profile.erb'),
 		require => Exec["virtualenv $venv_root"],
 	}
 

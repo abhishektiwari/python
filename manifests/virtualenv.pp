@@ -3,10 +3,15 @@
 # Goes into manifests/virtualenv.pp
 
 class python::virtualenv {
-	# resources
+	# Install virtualenv
 	package { "python-virtualenv":
 		ensure     => installed,
-		require    => Package['python-setuptools', 'python-dev', 'build-essential'],
+		require    => Class[python],
+	}
+	# Install virtualenvwrapper
+	package { "python-virtualenvwrapper":
+		ensure => installed,
+		require    => Package['python-virtualenv'],
 	}
 	
 }
